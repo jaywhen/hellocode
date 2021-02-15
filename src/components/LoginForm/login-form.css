@@ -1,0 +1,30 @@
+.login-form {
+    width: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-card {
+    width: 25%;
+}
+
+.login-form-button {
+    width: 100%;
+}
+
+.social-login {
+    padding: 0 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .social-login>span {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+} */
+
+
