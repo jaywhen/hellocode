@@ -1,4 +1,10 @@
 .login {
-    background-image: url("../../assets/vg.jpg");
+    background-image: url("../../assets/Yosemite-Color-Block.png");
     background-size: cover;
+
+    width: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
