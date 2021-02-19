@@ -1,11 +1,26 @@
+import React from "react";
+import { Menu } from "antd";
+// import { NavLink } from "react-router-dom";
 import {DatePicker, Button} from 'antd'
-import 'antd/dist/antd.css';
+// import 'antd/dist/antd.css';
 
-var Header = () => {
+const Header = () => {
     return(
         <div>
-            <Button>Login</Button>
-            <DatePicker />
+            <Menu mode="horizontal" theme="light">
+                <Menu.Item>
+                    首页
+                </Menu.Item>
+                <Menu.Item>
+                    问答
+                </Menu.Item>
+                <Menu.Item>
+                    择校
+                </Menu.Item>
+                <Menu.Item>
+                    我
+                </Menu.Item>
+            </Menu>
         </div>
     )
 }

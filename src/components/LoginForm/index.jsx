@@ -1,13 +1,20 @@
 import React from "react";
 import { Card, Button, Form, Input, Divider } from "antd";
 import { GithubOutlined, GoogleOutlined, WechatOutlined } from "@ant-design/icons";
+import sha512 from "crypto-js/sha512";
 import "antd/dist/antd.css";
 import "./login-form.css";
 const LoginForm = () => {
     const onFinish = (values) => {
-        console.log("suc ", values)
-        // 加密
-
+        console.log("suc ", values);
+        // 暂且先用 sha512
+        let password = sha512(values.password).toString();
+        const data = {
+            username: values.username,
+            password: password,
+        }
+        // 后端检查是否存在该用户
+        // handle success or failed
     }
     return(
         <Card className="inner-card"  cover={<span style={{ textAlign: "center", fontFamily: "sans-serif", fontSize: 18, marginTop: 20 }}>登录</span>}>
