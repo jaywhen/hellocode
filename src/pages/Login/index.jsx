@@ -3,10 +3,10 @@ import Footer from "../../components/Footer";
 import LoginForm from "../../components/LoginForm";
 import "./login.css";
 
-const Login = () => {
+const Login = (props) => {
     return(
         <div className="login">
-            <LoginForm />
+            <LoginForm history={props.history} />
             <Footer />
         </div>
     )

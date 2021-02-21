@@ -1,12 +1,16 @@
 import React from "react";
 import Header from "../../components/Header";
 
-const Home = () => {
-    return(
+
+const Home = (props) => {
+    const validate = () => {
+        return localStorage.getItem("user") ? true : false;
+    }
+    return (
         <div>
-            <Header />
+            {validate() ? <Header /> : props.history.replace("/login")}
         </div>
-    );
+    )
 }
 
 export default Home;
