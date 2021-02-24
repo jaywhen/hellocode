@@ -1,15 +1,16 @@
-import { Route, Router } from "react-router-dom";
-import React from 'react'
+import {  Route, Switch, BrowserRouter } from "react-router-dom";
+import React, { useState, useEffect } from 'react'
+import "antd/dist/antd.css";
+import Login from "./pages/Login";
+// import history from "./history";
 import Home from "./pages/Home";
-import Login from './pages/Login';
-import history from "./history.js";
 export default function App() {
   return (
-    <div>
-      <Router history={history}>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/login" component={Login} />
-      </Router>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/login" component={ Login } />
+        <Route path="/" component={ Home } />
+      </Switch>
+    </BrowserRouter>
   );
 }

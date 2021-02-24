@@ -16,8 +16,8 @@ const LoginForm = (props) => {
         // 后端检查是否存在该用户
         // handle success or failed
         localStorage.setItem("user", data.username);
+        console.log(props.history)
         props.history.replace("/")
-        
     }
     return(
         <Card className="inner-card"  cover={<span style={{ textAlign: "center", fontFamily: "sans-serif", fontSize: 18, marginTop: 20 }}>登录</span>}>

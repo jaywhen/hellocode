@@ -1,14 +1,17 @@
 import React from "react";
-import Header from "../../components/Header";
+import { Redirect } from "react-router-dom";
+import Content from "../../components/Content";
+import Navigation from "../../components/Navigation";
 
 
-const Home = (props) => {
-    const validate = () => {
-        return localStorage.getItem("user") ? true : false;
+const Home = () => {
+    if(!localStorage.getItem("user")) {
+        return <Redirect to="/login" />
     }
-    return (
+    return(
         <div>
-            {validate() ? <Header /> : props.history.replace("/login")}
+            <Navigation />
+            <Content />
         </div>
     )
 }
