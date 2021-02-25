@@ -1,5 +1,5 @@
 import {  Route, Switch, BrowserRouter } from "react-router-dom";
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import "antd/dist/antd.css";
 import Login from "./pages/Login";
 // import history from "./history";

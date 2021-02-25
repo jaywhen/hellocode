@@ -1,0 +1,15 @@
+.qes-container {
+    display: flex;
+    justify-content: center;
+    
+}
+
+/* 等会儿写在组件里面 */
+.qes-item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: rgb(255,255,255);
+    width: 720px;
+    box-shadow: 0px 2px 5px #8b8b8b;
+}
