@@ -1,11 +1,9 @@
-.qes-container {
+.college-container {
     display: flex;
     justify-content: center;
-    
 }
 
-/* 等会儿写在组件里面 */
-.qes-item {
+.college-item {
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 5px;

@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Me() {
+export default function Hot() {
     return (
         <div>
-            <h1>我是Me</h1>
+            Hot
         </div>
     )
 }

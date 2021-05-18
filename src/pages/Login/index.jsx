@@ -1,5 +1,5 @@
 import React from "react";
-import { Redirect } from "react-router-dom";
+import { Redirect, withRouter } from "react-router-dom";
 import Footer from "../../components/Footer";
 import LoginForm from "../../components/LoginForm";
 import "./login.css";
@@ -10,10 +10,10 @@ const Login = (props) => {
     }
     return(
         <div className="login">
-            <LoginForm history={ props.history } />
+            <LoginForm />
             <Footer />
         </div>
     )
 };
 
-export default Login;
+export default withRouter(Login) ;

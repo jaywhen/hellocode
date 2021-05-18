@@ -4,9 +4,10 @@ import { GithubOutlined, GoogleOutlined, WechatOutlined } from "@ant-design/icon
 import sha512 from "crypto-js/sha512";
 import "antd/dist/antd.css";
 import "./login-form.css";
+import { withRouter } from "react-router";
 const LoginForm = (props) => {
     const onFinish = (values) => {
-        console.log("suc ", values);
+        console.log(props);
         // 暂且先用 sha512
         let password = sha512(values.password).toString();
         const data = {
@@ -62,4 +63,4 @@ const LoginForm = (props) => {
     );
 };
 
-export default LoginForm;
+export default withRouter(LoginForm);

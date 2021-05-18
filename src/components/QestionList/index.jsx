@@ -12,9 +12,9 @@ export default function QestionList(props) {
             title: `问题 ${i}`,
             avatar: 'https://cdn.v2ex.com/avatar/9a00/3ef6/483443_large.png?m=1603358072',
             description:
-            '关于华东理工大学',
+            'JWT ',
             content:
-            '能否简述一下华东理工大学计算机科学专业的情况？',
+            'JWT 可以实现 stateless authentication，但是 refresh token 不是无状态的，那 JWT 的意义是什么？',
         });
     }
 

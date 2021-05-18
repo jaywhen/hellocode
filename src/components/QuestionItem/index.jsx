@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Choose() {
+export default function QuestionItem() {
     return (
         <div>
-            <h1>我是Choose</h1>
+            
         </div>
     )
 }
