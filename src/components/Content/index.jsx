@@ -6,8 +6,8 @@ export default function Content() {
     return (
         <div>
             <Switch>
-                <Route exact path="/" component={TopStory} />
                 <Route path="/academy" component={Academy} />
+                <Route path="/" component={TopStory} />
             </Switch>
         </div>
     )

@@ -1,0 +1,33 @@
+.story-item-wrapper {
+    display: flex;
+    padding: 10px 22px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgb(18 18 18 / 10%);
+    border-top: rgb(226, 226, 226) solid 0.8px;
+}
+
+.avatar {
+    border-radius: 4px;
+    width: 56px;
+    height: 56px;
+    margin-right: 10px;
+}
+
+.story-question-content {
+}
+
+.question-content {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2c2c2c;
+    margin-bottom: 5px;
+}
+
+.question-item-username {
+    color: #778087;
+    font-weight: 700;
+}
+
+.question-item-time {
+    color: #778087;
+}

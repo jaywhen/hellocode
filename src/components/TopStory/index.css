@@ -1,0 +1,18 @@
+.Topstory-wrapper {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.Topstory-content {
+    display: flex;
+    justify-content: space-evenly;
+    width: 1000px;
+}
+
+.Topstory-right-bar {
+    width: 200px;
+}
+
+.Topstory-main {
+}
