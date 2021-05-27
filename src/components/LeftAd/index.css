@@ -1,0 +1,22 @@
+.ad-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 18px 0px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgb(18 18 18 / 10%);
+    margin-top: 20px;
+}
+
+.ad-cover {
+    width: 250px;
+    height: 250px;
+}
+
+.ad-discription {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 14px;
+    background-color: rgb(242, 242, 242);
+    color: rgb(77, 64, 64);
+    font-weight: 700;
+}

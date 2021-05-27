@@ -1,0 +1,12 @@
+.user-data-item {
+    text-align: center  ;
+}
+
+.user-data-item-data {
+    font-size: 16px;
+}
+
+.user-data-item-name {
+    font-size: 14px;
+    color: rgb(58, 52, 52);
+}

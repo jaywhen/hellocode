@@ -1,0 +1,27 @@
+.nav-header {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 1px 3px rgb(18 18 18 / 10%);
+}
+
+.nav-content {
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-content-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu {
+    margin-left: 20px;
+}
+
+.search-bar {
+    width: 400px;
+}

@@ -14,10 +14,15 @@
     align-self: center;
 }
 
-.Tablecard-item-link {
+/* .Tablecard-item-link {
+    color: #000;
+} */
+
+#tabRecom, #tabFollow, #tabHot {
     color: #000;
 }
 
-/* .Tablecard-item-link:visited {
-    color: rgb(209, 29, 29);
-} */
+#tabRecomActived, #tabFollowActived, #tabHotActived {
+    color: rgb(72, 94, 218);
+}
+

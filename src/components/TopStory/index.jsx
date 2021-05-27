@@ -1,4 +1,6 @@
 import React from 'react'
+import BasicInfoUserCard from '../BasicUserInfoCard'
+import LeftAd from '../LeftAd'
 import TopStoryMainCard from '../TopStoryComponents/TopStoryMainCard'
 import './index.css'
 
@@ -11,7 +13,8 @@ export default function TopStory() {
                     <TopStoryMainCard />
                 </div>
                 <div className="Topstory-right-bar">
-                    right
+                    <BasicInfoUserCard />
+                    <LeftAd />
                 </div>
             </div>
         </div>
