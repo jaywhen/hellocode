@@ -1,5 +1,8 @@
 .nav-header {
     display: flex;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
     justify-content: center;
     background-color: #fff;
     width: 100%;

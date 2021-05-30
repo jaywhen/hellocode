@@ -1,10 +1,9 @@
-import { Button } from 'antd';
+import { Button, Divider } from 'antd';
 import { EditOutlined, NotificationOutlined } from "@ant-design/icons";
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import './index.css'
 import UserData from './UserData';
-import UserDataDivider from './UserDataDivider';
 export default function BasicInfoUserCard() {
     const [userInfo, setUserInfo] = useState('');
     useEffect(() => {
@@ -21,9 +20,9 @@ export default function BasicInfoUserCard() {
             </div>
             <div className="user-data">
                 <UserData data={userInfo.follow} dataName="我的关注" />
-                <UserDataDivider />
+                <Divider type="vertical" style={{ width: "0.8px", height: "45px", backgroundColor: "rgb(211, 208, 208)" }} />
                 <UserData data={userInfo.topic} dataName="话题收藏" />
-                <UserDataDivider />
+                <Divider type="vertical" style={{ width: "0.8px", height: "45px", backgroundColor: "rgb(211, 208, 208)" }} />
                 <UserData data={userInfo.answer} dataName="我的回答" />
             </div>
             <div className="new-question">

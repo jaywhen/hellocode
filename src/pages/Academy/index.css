@@ -1,0 +1,10 @@
+.academy-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.academy-content {
+    width: 750px;
+    background-color: #fff;
+}
