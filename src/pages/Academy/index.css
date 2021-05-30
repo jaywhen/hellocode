@@ -5,6 +5,8 @@
 }
 
 .academy-content {
-    width: 750px;
-    background-color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    width: 800px;
 }
+

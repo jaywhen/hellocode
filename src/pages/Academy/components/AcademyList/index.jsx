@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import AcademyItem from '../AcademyItem';
-
+import './index.css'
 export default function AcademyList() {
     const [academylist, setAcademyList] = useState([]);
     useEffect(() => {
@@ -19,7 +19,7 @@ export default function AcademyList() {
         );
     });
     return (
-        <div>
+        <div className="academy-list-wrapper">
             {academys}
         </div>
     )

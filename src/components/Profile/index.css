@@ -1,0 +1,81 @@
+.user-profile-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.student-card {
+    width: 1000px;
+    box-shadow: 0px 2px 3px rgb(199, 199, 199);
+    margin-top: 70px;
+}
+
+.UserCover-colorBlock {
+    height: 132px;
+    background: #999;
+}
+
+.ProfileHeader-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.ProfileHeader-main {
+    /* position: relative; */
+    margin: 0 20px 24px;
+}
+
+.UserAvatar {
+    position: absolute;
+    border-radius: 8px;
+    border: 4px solid #fff;
+    top: -30px;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: center;
+}
+
+.ProfileHeader-content {
+    padding-top: 12px;
+    padding-left: 32px;
+    border-left: 164px solid transparent;
+}
+
+.ProfileHeader-contentHead {
+    padding-right: 56px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ProfileHeader-title {
+    font: inherit;
+}
+
+.ProfileHeader-name {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.ProfileHeader-headline {
+    margin-left: 12px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.ProfileHeader-infoItem {
+    display: flex;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.ProfileHeader-detailLabel {
+    width: 60px;
+    margin-right: 37px;
+    font-weight: 600;
+}
+
+.ProfileHeader-detailValue {
+    flex: 1 1;
+}

@@ -25,6 +25,11 @@
     margin-left: 20px;
 }
 
+.nav-avatar {
+    width: 30px;
+    height: 30px;
+}
+
 .search-bar {
-    width: 400px;
+    width: 300px;
 }

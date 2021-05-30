@@ -1,34 +1,36 @@
-.about-wrapper {
+.careers-wrapper {
+    margin-top: 70px;
     display: flex;
     justify-content: center;
-    margin-top: 70px;
 }
 
-.about-content {
-    width: 1000px;
+.careers-content {
+    width: 900px;
     padding: 10px 22px;
     background-color: #fff;
     box-shadow: 0 1px 3px rgb(18 18 18 / 10%);
 }
 
-.about-content-title {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.about-info {
+.careers-introduce-hc {
+    margin-bottom: 20px;
     font-size: 16px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 36px;
 }
 
-.about-info a {
-    color: rgb(0, 102, 255);
+.careers-positions {
+    line-height: 36px;
 }
 
-.about-info-intro {
-    margin-bottom: 20px;
+.position-title {
+    font-size: 18px;
+    font-weight: 700;
 }
 
-.last-mod {
-    color: #aaaaaa;
+.position-expect {
+    font-size: 16px;
+}
+
+.position-expect ul {
+    padding-left: 22px;
 }

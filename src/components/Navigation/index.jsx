@@ -1,12 +1,27 @@
-import React from 'react'
-import { Input, Menu } from "antd";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from 'react'
+import { Button, Dropdown, Input, Menu } from "antd";
+import { Link, withRouter } from "react-router-dom";
 import './index.css'
+import { matchPath } from '../../util';
 
 const MenuItem = Menu.Item;
 const {Search} = Input;
 
-export default function Navigation() {
+function Navigation(props) {
+    const [pathKey, setPathKey] = useState('');
+    useEffect(() => {
+        let pathname = props.location.pathname;
+        let key = matchPath(pathname);
+        setPathKey(key);
+    }, [props])
+
+    const options = (
+        <Menu style={{ marginTop: "10px", textAlign: "center", width: "100px" }}>
+            <MenuItem key="1"><Link to="/member/Jaywhen">我的主页</Link></MenuItem>
+            <MenuItem key="2">设置</MenuItem>
+            <MenuItem key="3">退出</MenuItem>
+        </Menu>
+    );
     return (
         <div className="nav-header">
             <div className="nav-content">
@@ -19,8 +34,8 @@ export default function Navigation() {
                         </a>
                     </div>
                     <div className="nav-menu">
-                        <Menu theme="light" mode="horizontal" defaultSelectedKeys={['home']} style={{ display: "flex", justifyContent: "center", fontSize: "15px" }}>
-                            <MenuItem key="home"><Link to="/" />首页</MenuItem>
+                        <Menu theme="light" mode="horizontal" defaultSelectedKeys={['hot']} selectedKeys={pathKey} style={{ display: "flex", justifyContent: "center", fontSize: "15px" }}>
+                            <MenuItem key="home"><Link to="/hot" />首页</MenuItem>
                             <MenuItem key="academy"><Link to="/academy" />择校</MenuItem>
                             <MenuItem key="about"><Link to="/about" />关于</MenuItem>
                             <MenuItem key="careers"><Link to="/careers" />加入我们</MenuItem>
@@ -33,8 +48,15 @@ export default function Navigation() {
                         placeholder='搜索感兴趣的话题吧!'
                         allowClear />
                 </div>
+                <Button style={{ borderColor: "#fff", height: "100%" }} type="link" onClick={e => e.preventDefault()}>
+                    <Dropdown overlay={options} placement="bottomCenter" trigger={['click']}>
+                        <img className="nav-avatar" src="https://cdn.v2ex.com/avatar/9a00/3ef6/483443_large.png?m=1603358072" alt="avatar" />
+                    </Dropdown>
+                </Button>
             </div>
 
         </div>
     )
 }
+
+export default withRouter(Navigation);

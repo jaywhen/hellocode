@@ -651,5 +651,17 @@
             "logo": "https://cdn.applysquare.net/a2/institute/cn.swjtu/logo.png",
             "tag": ["985", "英一", "数一"]
         }
+    ],
+    "member": [
+        {
+            "id": 1,
+            "username": "Jaywhen",
+            "avatar": "https://pic3.zhimg.com/v2-33acc9f2a4107116c0f01269e82f4caa_xl.jpg",
+            "cover": "https://pic4.zhimg.com/80/v2-8c53ad334909e58d3798be4102a7a2b4_r.jpg",
+            "description": "jaywhen.com",
+            "university": "CMU",
+            "address": "北京市朝阳区平乐园100号",
+            "email": "jaywhen@qq.com"
+        }
     ]
 }
