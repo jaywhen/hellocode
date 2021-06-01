@@ -20,9 +20,17 @@
     margin-bottom: 5px;
 }
 
+.question-content:hover {
+    text-decoration: underline;
+}
+
 .question-item-username {
     color: #778087;
     font-weight: 700;
+}
+
+.question-item-username:hover {
+    text-decoration: underline;
 }
 
 .question-item-time {

@@ -4,7 +4,7 @@
             "id": 1,
             "title": "22考研有哪些推荐的211吗？",
             "author": "Jaywhen",
-            "avatar": "https://cdn.v2ex.com/avatar/9a00/3ef6/483443_large.png?m=1603358072",
+            "avatar": "https://pic3.zhimg.com/v2-33acc9f2a4107116c0f01269e82f4caa_xl.jpg",
             "tag": "211",
             "time": "3分钟前"
         },
@@ -195,7 +195,7 @@
     ],
     "userInfo": {
         "name": "Jaywhen",
-        "avatar": "https://cdn.v2ex.com/avatar/9a00/3ef6/483443_large.png?m=1603358072",
+        "avatar": "https://pic3.zhimg.com/v2-33acc9f2a4107116c0f01269e82f4caa_xl.jpg",
         "topic": "12",
         "follow": "32",
         "answer": "18"
@@ -662,6 +662,28 @@
             "university": "CMU",
             "address": "北京市朝阳区平乐园100号",
             "email": "jaywhen@qq.com"
+        }
+    ],
+    "question": [
+        {
+            "id": 1,
+            "title": "2021计算机考研有什么性价比极高的学校？",
+            "content": "<p>西南地区以外</p>",
+            "answer": "3",
+            "tag": "211"
+        },
+        {
+            "id": 2,
+            "title": "22考研有哪些推荐的985吗？",
+            "content": "除西南地区以外",
+            "answer": "4"
+        }
+    ],
+    "answer": [
+        {
+            "id": 1,
+            "content": "",
+            "like": 32
         }
     ]
 }

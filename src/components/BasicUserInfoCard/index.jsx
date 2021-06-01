@@ -4,6 +4,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import './index.css'
 import UserData from './UserData';
+import { Link } from 'react-router-dom';
 export default function BasicInfoUserCard() {
     const [userInfo, setUserInfo] = useState('');
     useEffect(() => {
@@ -15,8 +16,10 @@ export default function BasicInfoUserCard() {
     return (
         <div className="basic-info-wrapper">
             <div className="user-info-bar">
-                <img src={userInfo.avatar} className="avatar" alt={userInfo.name} />
-                <span className="userInfo-name">{userInfo.name}</span>
+                <Link to="/member/Jaywhen">
+                    <img src={userInfo.avatar} className="avatar" alt={userInfo.name} />
+                    <span className="userInfo-name">{userInfo.name}</span>
+                </Link>
             </div>
             <div className="user-data">
                 <UserData data={userInfo.follow} dataName="我的关注" />
