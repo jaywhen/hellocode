@@ -662,6 +662,46 @@
             "university": "CMU",
             "address": "北京市朝阳区平乐园100号",
             "email": "jaywhen@qq.com"
+        },
+        {
+            "id": 2,
+            "username": "TJ",
+            "avatar": "https://z3.ax1x.com/2021/06/02/2MmM28.jpg",
+            "cover": "https://pic4.zhimg.com/80/v2-8c53ad334909e58d3798be4102a7a2b4_r.jpg",
+            "description": "tjholowaychuk.com",
+            "university": "CMU",
+            "address": "北京市朝阳区平乐园100号",
+            "email": "jaywhen@qq.com"
+        },
+        {
+            "id": 3,
+            "username": "Shudin",
+            "avatar": "https://pic1.zhimg.com/v2-2c3878772e5098929e2c53b3b0bb2b62_xl.jpg",
+            "cover": "https://pic4.zhimg.com/80/v2-8c53ad334909e58d3798be4102a7a2b4_r.jpg",
+            "description": "shud.in",
+            "university": "CMU",
+            "address": "北京市朝阳区平乐园100号",
+            "email": "jaywhen@qq.com"
+        },
+        {
+            "id": 4,
+            "username": "jobs",
+            "avatar": "https://z3.ax1x.com/2021/06/02/2MmM28.jpg",
+            "cover": "https://pic4.zhimg.com/80/v2-8c53ad334909e58d3798be4102a7a2b4_r.jpg",
+            "description": "jaywhen.com",
+            "university": "CMU",
+            "address": "北京市朝阳区平乐园100号",
+            "email": "jaywhen@qq.com"
+        },
+        {
+            "id": 5,
+            "username": "Dan",
+            "avatar": "https://z3.ax1x.com/2021/06/02/2MqPMD.jpg",
+            "cover": "https://pic4.zhimg.com/80/v2-8c53ad334909e58d3798be4102a7a2b4_r.jpg",
+            "description": "overreacted.io",
+            "university": "CMU",
+            "address": "北京市朝阳区平乐园100号",
+            "email": "jaywhen@qq.com"
         }
     ],
     "question": [
@@ -670,7 +710,9 @@
             "title": "2021计算机考研有什么性价比极高的学校？",
             "content": "<p>西南地区以外</p>",
             "answer": "3",
-            "tag": "211"
+            "tag": "211",
+            "author": "Jaywhen",
+            "avatar": "https://pic3.zhimg.com/v2-33acc9f2a4107116c0f01269e82f4caa_xl.jpg"
         },
         {
             "id": 2,
@@ -682,8 +724,35 @@
     "answer": [
         {
             "id": 1,
-            "content": "",
-            "like": 32
+            "question_id": 1,
+            "author": "TJ",
+            "content": "Welcome to join us! <a href='https://apex.sh/' target='__balnk' nor>apex.sh/</a>",
+            "like": 32,
+            "comment": 23
+        },
+        {
+            "id": 2,
+            "question_id": 1,
+            "author": "Shudin",
+            "content": "推荐我的母校---Fudan",
+            "like": 30,
+            "comment": 20
+        },
+        {
+            "id": 3,
+            "question_id": 1,
+            "author": "Dan",
+            "content": "Actually, you can join us. Yeah, i mean, let's work together!",
+            "like": 20,
+            "comment": 62
+        },
+        {
+            "id": 4,
+            "question_id": 2,
+            "author": "jobs",
+            "content": "江南大学",
+            "like": 10,
+            "comment": 23
         }
     ]
 }

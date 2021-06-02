@@ -16,6 +16,17 @@
     font-size: 16px;
 }
 
+.question-header-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.qustion-header-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 3px;
+}
+
 .question-header-bottom {
     display: flex;
     justify-content: space-between;

@@ -1,22 +1,17 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react'
-import API from '../../api';
+// 13 14 行属性冗余
+
+import React from 'react'
 import QuestionHeader from './components/QuestionHeader';
+import QuestionMain from './components/QuestionMain';
 import './index.css'
 
 export default function Question(props) {
     let {id} = props.match.params;
-    const [questionInfo, setQuestionInfo] = useState('');
-    useEffect(() => {
-        axios.get(`${API}/question/${id}`)
-             .then((rsp) => {
-                 setQuestionInfo(rsp.data);
-             })
-    }, [id]);
     return (
         <div className="question-wrapper">
-            <div question-wrapper-inner>
-                <QuestionHeader {...questionInfo} />
+            <div className="question-wrapper-inner">
+                <QuestionHeader questionId={id} />
+                <QuestionMain questionId={id} />
             </div>
         </div>
     )
