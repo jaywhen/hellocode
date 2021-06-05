@@ -1,10 +1,10 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, { forwardRef, useEffect, useImperativeHandle, useState } from 'react'
 import API from '../../../../api'
 import Answer from '../Answer';
 import './index.css'
 
-export default function QuestionMain(props) {
+function QuestionMain(props, ref) {
     const {questionId} = props;
     const [answerList, setAnswerList] = useState([]);
     useEffect(() => {
@@ -13,6 +13,12 @@ export default function QuestionMain(props) {
                  setAnswerList([...rsp.data]);
              });
     }, [questionId]);
+
+    useImperativeHandle(ref, () => ({
+        addData: (data) => {
+            console.log(data);
+        }
+    }));
 
     const anwsers = answerList.map((item) => {
         return (
@@ -28,3 +34,5 @@ export default function QuestionMain(props) {
         </div>
     )
 }
+
+export default forwardRef(QuestionMain);

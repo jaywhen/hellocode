@@ -10,7 +10,6 @@ export default function Answer(props) {
     useEffect(() => {
         axios.get(`${API}/member/${props.author}`)
              .then((rsp) => {
-                //  console.log(rsp.data[0])
                  setUserInfo(rsp.data[0]);
              })
     }, [props.author])

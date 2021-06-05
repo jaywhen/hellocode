@@ -1,11 +1,20 @@
-import React from 'react'
+import React, { forwardRef, useImperativeHandle, useRef } from 'react'
 import { Redirect, Route, Switch } from 'react-router-dom'
 import FollowStory from '../FollowStory'
 import RecommendStory from '../RecommendStory'
 import StoryList from '../StoryList'
 import TableCard from '../TableCard'
 
-export default function TopStoryMainCard() {
+function TopStoryMainCard(props, ref) {
+
+    let ChildRef = useRef();
+
+    useImperativeHandle(ref, () => ({
+        passData: (data) => {
+            ChildRef.current.addData(data);
+        }
+    }))
+    
     return (
         <div>
             <div className="TopStory-tableCard">
@@ -13,7 +22,7 @@ export default function TopStoryMainCard() {
             </div>
             <div className="TopStory-list">
                 <Switch>
-                    <Route path="/hot" component={StoryList} />
+                    <Route path="/hot" render={() => <StoryList ref={ChildRef} />} />
                     <Route path="/follow" component={FollowStory} />
                     <Route path="/recommend" component={RecommendStory} />
                     <Route path="/"><Redirect to="/hot" /></Route>
@@ -22,3 +31,5 @@ export default function TopStoryMainCard() {
         </div>
     )
 }
+
+export default forwardRef(TopStoryMainCard);

@@ -20,8 +20,15 @@ export default function BasicInfoUserCard(props) {
     }, [])
 
     const onFinish = (values) => {
-        // console.log(values);
-        props.handleDataTrans(values);
+        let data = {
+            "title": values.title,
+            "content": values.content,
+            "author": userInfo.name,
+            "avatar": userInfo.avatar,
+            "tag": "NLP",
+            "time": "刚刚"
+        }
+        props.handleDataTrans(data);
         setAskQuestion(false);
     }
 
