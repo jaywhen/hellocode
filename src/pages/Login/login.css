@@ -1,10 +1,9 @@
 .login {
     background-image: url("../../assets/Yosemite-Color-Block.png");
     background-size: cover;
-
-    width: auto;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }

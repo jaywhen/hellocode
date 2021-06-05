@@ -38,3 +38,13 @@
     color: rgb(140, 28, 214);
     font-weight: 700;
 }
+
+.user-card-ask-question-form {
+    align-items: center;
+}
+
+.user-card-ask-question-form-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}

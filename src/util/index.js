@@ -5,10 +5,14 @@ const PATH_MAP = {
     recommend: 'home',
     academy: 'academy',
     about: 'about',
-    careers: 'careers'
+    careers: 'careers',
+    answer: 'answer',
+    asks: 'asks',
+    following: 'following'
 }
     
 export function matchPath(path) {
-    let key = path.slice(1);
+    let index = path.lastIndexOf("/");
+    let key = path.slice(index+1);
     return PATH_MAP[key];
 }

@@ -4,9 +4,8 @@
 }
 
 .student-card {
-    width: 1000px;
-    box-shadow: 0px 2px 3px rgb(199, 199, 199);
-    margin-top: 70px;
+    width: 970px;
+    /* background-color: #fff; */
 }
 
 .UserCover-colorBlock {
@@ -14,9 +13,16 @@
     background: #999;
 }
 
+.ProfileHeader-userCover {
+    background-color: #fff;
+}
+
 .ProfileHeader-wrapper {
     position: relative;
     width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 1px 3px rgb(199, 199, 199);
+    padding-bottom: 5px;
 }
 
 .ProfileHeader-main {
@@ -78,4 +84,8 @@
 
 .ProfileHeader-detailValue {
     flex: 1 1;
+}
+
+.ProfileMain-wrapper {
+    margin-top: 12px;
 }

@@ -6,7 +6,6 @@ const Footer = () => {
             <a href="https://github.com/HelloCodeRun" rel="noopener noreferrer" target="_blank">Github</a>
             <a href="http://example.com/" target="_blank" rel="noopener noreferrer">FAQ</a>
             <a href="http://example.com/" target="_blank" rel="noopener noreferrer">API</a>
-            <a href="http://example.com/" target="_blank" rel="noopener noreferrer">这是备案号</a>
         </div>
     );
 }

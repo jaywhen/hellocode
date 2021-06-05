@@ -1,6 +1,7 @@
 import { Image } from 'antd';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import ProfileMain from './components/ProfileMain';
 import './index.css'
 
 export default function Profile(props) {
@@ -61,6 +62,9 @@ export default function Profile(props) {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className="ProfileMain-wrapper">
+                    <ProfileMain username={username} />
                 </div>
             </div>
         </div>

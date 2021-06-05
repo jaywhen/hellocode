@@ -9,11 +9,12 @@ const {Search} = Input;
 
 function Navigation(props) {
     const [pathKey, setPathKey] = useState('');
+    let {pathname} = props.location;
+
     useEffect(() => {
-        let pathname = props.location.pathname;
         let key = matchPath(pathname);
         setPathKey(key);
-    }, [props])
+    }, [pathname])
 
     const options = (
         <Menu style={{ marginTop: "10px", textAlign: "center", width: "100px" }}>
@@ -50,11 +51,10 @@ function Navigation(props) {
                 </div>
                 <Button style={{ borderColor: "#fff", height: "100%" }} type="link" onClick={e => e.preventDefault()}>
                     <Dropdown overlay={options} placement="bottomCenter" trigger={['click']}>
-                        <img className="nav-avatar" src="https://cdn.v2ex.com/avatar/9a00/3ef6/483443_large.png?m=1603358072" alt="avatar" />
+                        <img className="nav-avatar" src="https://pic3.zhimg.com/v2-33acc9f2a4107116c0f01269e82f4caa_xl.jpg" alt="avatar" />
                     </Dropdown>
                 </Button>
             </div>
-
         </div>
     )
 }

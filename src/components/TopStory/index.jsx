@@ -6,6 +6,10 @@ import './index.css'
 
 export default function TopStory() {
 
+    const handleDataTrans = (data) => {
+        console.log(data);
+    }
+
     return (
         <div className="Topstory-wrapper">
             <div className="Topstory-content">
@@ -13,7 +17,7 @@ export default function TopStory() {
                     <TopStoryMainCard />
                 </div>
                 <div className="Topstory-right-bar">
-                    <BasicInfoUserCard />
+                    <BasicInfoUserCard handleDataTrans={handleDataTrans} />
                     <RightAd />
                 </div>
             </div>
