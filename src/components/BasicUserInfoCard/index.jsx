@@ -26,7 +26,8 @@ export default function BasicInfoUserCard(props) {
             "author": userInfo.name,
             "avatar": userInfo.avatar,
             "tag": "NLP",
-            "time": "刚刚"
+            "create_time": "刚刚",
+            "answer": "0"
         }
         props.handleDataTrans(data);
         setAskQuestion(false);

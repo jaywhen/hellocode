@@ -9,7 +9,6 @@ import './index.css'
 
 const MenuItem = Menu.Item;
 
-
 function ProfileMain(props) {
     let {username} = props;
 

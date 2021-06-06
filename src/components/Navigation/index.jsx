@@ -104,6 +104,7 @@ function Navigation(props) {
                         value={searchText}
                         onSearch={onSearch}
                         onChange={onClickSearchItem}
+                        allowClear
                         >
                             { searchData.map(d => (
                                 <Option key={d.id}>{d.title}</Option>

@@ -18,7 +18,7 @@ export default function StoryItem(props) {
                     <Link to={`/member/${props.author}`}>
                         <span className="question-item-username">{props.author}</span>&nbsp;•&nbsp;
                     </Link>
-                    <span className="question-item-time">{props.time}</span>
+                    <span className="question-item-time">{props.create_time}</span>
                 </div>
             </div>
         </div>

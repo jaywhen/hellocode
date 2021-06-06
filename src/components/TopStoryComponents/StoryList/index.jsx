@@ -22,8 +22,8 @@ function StoryList(props, ref) {
             axios.post(`http://localhost:3001/hot`, data)
                  .then((res) => {
                      let tmpData = [...storylist];
-                     tmpData.push(res.data);
-                     setStoryList([...tmpData.reverse()]);
+                     tmpData = [res.data, ...tmpData];
+                     setStoryList([...tmpData]);
                  });
         }
     }));
