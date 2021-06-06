@@ -1,26 +1,75 @@
-import React, { useEffect, useState } from 'react'
-import { Button, Dropdown, Input, Menu } from "antd";
+import React, { useEffect, useRef, useState } from 'react'
+import { Button, Dropdown, Menu, Select } from "antd";
 import { Link, withRouter } from "react-router-dom";
 import './index.css'
 import { matchPath } from '../../util';
+import axios from 'axios';
+import API from '../../api';
 
 const MenuItem = Menu.Item;
-const {Search} = Input;
+// const {Search} = Input;
+const {Option} = Select;
 
 function Navigation(props) {
     const [pathKey, setPathKey] = useState('');
     let {pathname} = props.location;
 
+    // 所有问题
+    const [questions, setQuestions] = useState([]);
+
+    const [searchText, setSearchText] = useState(undefined);
+    const [searchData, setSearchData] = useState([]);
+
+    const searchRef = useRef(null);
+
+    /**
+     * Query by title
+     * @param {string} key 
+     * @param {Array} arr
+     */
+    const fuzzyQuery = (arr, key) => {
+        let fuzzyArr = [];
+        arr.forEach(element => {
+            if(element.title.indexOf(key) >= 0) {
+                fuzzyArr.push(element);
+            }
+        });
+        return fuzzyArr;
+    }
+
+    useEffect(() => {
+        axios.get(`${API}/question`)
+             .then((rsp) => {
+                 setQuestions(rsp.data);
+             });
+    }, []);
+
     useEffect(() => {
         let key = matchPath(pathname);
         setPathKey(key);
-    }, [pathname])
+    }, [pathname]);
+
+    const onSearch = value => {
+        if(value) {
+            setSearchText(value);
+            let tmpData = fuzzyQuery(questions, value);
+            setSearchData(tmpData);
+        }        
+    }
+
+    const onClickSearchItem = value => {
+        let path = `/question/${value}`;
+        props.history.push(path);
+        setSearchData([]);
+        // 使搜索框失去焦点
+        searchRef.current.blur();
+    }
 
     const options = (
         <Menu style={{ marginTop: "10px", textAlign: "center", width: "100px" }}>
-            <MenuItem key="1"><Link to="/member/Jaywhen">我的主页</Link></MenuItem>
-            <MenuItem key="2">设置</MenuItem>
-            <MenuItem key="3">退出</MenuItem>
+            <MenuItem key="home"><Link to="/member/Jaywhen">我的主页</Link></MenuItem>
+            <MenuItem key="settings">设置</MenuItem>
+            <MenuItem key="logout">退出</MenuItem>
         </Menu>
     );
     return (
@@ -44,10 +93,22 @@ function Navigation(props) {
                     </div>
                 </div>
                 <div className="nav-search">
-                    <Search
-                        className="search-bar"
-                        placeholder='搜索感兴趣的话题吧!'
-                        allowClear />
+                    <Select
+                        ref={searchRef}
+                        style={{ width: "300px" }}
+                        placeholder="搜索感兴趣的话题吧!"
+                        showSearch
+                        showArrow={false}
+                        filterOption={false}
+                        notFoundContent="似乎触及了我的知识盲区🍹"
+                        value={searchText}
+                        onSearch={onSearch}
+                        onChange={onClickSearchItem}
+                        >
+                            { searchData.map(d => (
+                                <Option key={d.id}>{d.title}</Option>
+                            )) }
+                    </Select>
                 </div>
                 <Button style={{ borderColor: "#fff", height: "100%" }} type="link" onClick={e => e.preventDefault()}>
                     <Dropdown overlay={options} placement="bottomCenter" trigger={['click']}>

@@ -1,3 +1,4 @@
+import { message } from 'antd';
 import axios from 'axios'
 import React, { forwardRef, useEffect, useImperativeHandle, useState } from 'react'
 import API from '../../../../api'
@@ -10,13 +11,20 @@ function QuestionMain(props, ref) {
     useEffect(() => {
         axios.get(`${API}/answer?question_id=${questionId}`)
              .then((rsp) => {
-                 setAnswerList([...rsp.data]);
+                 setAnswerList([...(rsp.data.reverse())]);
              });
     }, [questionId]);
 
     useImperativeHandle(ref, () => ({
         addData: (data) => {
-            console.log(data);
+            // console.log(data);
+            axios.post(`${API}/answer`, data)
+                 .then((res) => {
+                     let tmpData = [...answerList];
+                     tmpData.push(res.data);
+                     setAnswerList([...tmpData.reverse()]);
+                     message.success('回答成功!');
+                 });
         }
     }));
 

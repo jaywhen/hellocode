@@ -49,6 +49,7 @@ export default function QuestionHeader(props) {
             </div>
             <Modal
                 width="700px"
+                style={{ top: "30px" }}
                 visible={answerQes}
                 destroyOnClose={true}
                 footer={[]}
