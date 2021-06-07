@@ -2,12 +2,10 @@
 
 ## using
 
-- React
-- Ant-design
-- json-server
-- braft-editor
-
-
+- [React](https://github.com/facebook/react)
+- [Ant-design](https://github.com/ant-design/ant-design)
+- [json-server](https://github.com/typicode/json-server)
+- [braft-editor](https://github.com/margox/braft-editor)
 
 ## dev
 
@@ -22,8 +20,6 @@ json-server --watch db.json --routes routes.json
 cd ..
 yarn start
 ```
-
-
 
 ## screenshot
 
