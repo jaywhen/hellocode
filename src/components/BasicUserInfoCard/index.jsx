@@ -16,7 +16,7 @@ export default function BasicInfoUserCard(props) {
         axios.get('http://localhost:3001/userInfo')
              .then((res) => {
                  setUserInfo(res.data);
-             })
+             });
     }, [])
 
     const onFinish = (values) => {

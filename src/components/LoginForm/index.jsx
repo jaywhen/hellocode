@@ -7,18 +7,16 @@ import "./login-form.css";
 import { withRouter } from "react-router";
 const LoginForm = (props) => {
     const onFinish = (values) => {
-        console.log(props);
-        // 暂且先用 sha512
+        // console.log(props);
         let password = sha512(values.password).toString();
         const data = {
             username: values.username,
             password: password,
         }
-        // 后端检查是否存在该用户
-        // handle success or failed
+
         localStorage.setItem("user", data.username);
-        console.log(props.history)
-        props.history.replace("/")
+        console.log(props.history);
+        props.history.replace("/");
     }
     return(
         <Card className="inner-card"  cover={<span style={{ textAlign: "center", fontFamily: "sans-serif", fontSize: 18, marginTop: 20 }}>登录</span>}>
