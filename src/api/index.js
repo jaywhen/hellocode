@@ -1,2 +1,2 @@
-const API = 'http://localhost:3001';
+const API = 'https://hc-server001.herokuapp.com';
 export default API;

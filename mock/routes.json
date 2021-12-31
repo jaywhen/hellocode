@@ -1,3 +1,0 @@
-{
-    "/member/:username": "/member?username=:username"
-}

@@ -1,11 +1,12 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import AcademyItem from '../AcademyItem';
+import API from '../../../../api';
 import './index.css'
 export default function AcademyList() {
     const [academylist, setAcademyList] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:3001/academys')
+        axios.get(`${API}/academys`)
              .then((res) => {
                  setAcademyList([...res.data]);
              })

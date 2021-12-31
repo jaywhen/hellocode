@@ -2,13 +2,14 @@ import { Image } from 'antd';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import ProfileMain from './components/ProfileMain';
+import API from '../../api';
 import './index.css'
 
 export default function Profile(props) {
     let {username} = props.match.params;
     const [userInfo, setUserInfo] = useState('');
     useEffect(() => {
-        axios.get(`http://localhost:3001/member/${username}`)
+        axios.get(`${API}/member/${username}`)
              .then((rsp) => {
                  setUserInfo(rsp.data[0]);
              });

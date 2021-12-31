@@ -3,6 +3,7 @@ import { EditOutlined, NotificationOutlined } from "@ant-design/icons";
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import './index.css'
+import API from '../../api';
 import UserData from './UserData';
 import { Link } from 'react-router-dom';
 
@@ -13,7 +14,7 @@ export default function BasicInfoUserCard(props) {
     const [userInfo, setUserInfo] = useState('');
     const [askQuestion, setAskQuestion] = useState(false);
     useEffect(() => {
-        axios.get('http://localhost:3001/userInfo')
+        axios.get(`${API}/userInfo`)
              .then((res) => {
                  setUserInfo(res.data);
              });

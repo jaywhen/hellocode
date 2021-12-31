@@ -1,12 +1,13 @@
 import { message } from 'antd';
 import axios from 'axios'
 import React, { forwardRef, useEffect, useImperativeHandle, useState } from 'react'
+import API from '../../../api';
 import StoryItem from '../StoryItem';
 
 function StoryList(props, ref) {
     const [storylist, setStoryList] = useState([]);
     useEffect(() => {
-        axios.get(`http://localhost:3001/hot`)
+        axios.get(`${API}/hot`)
              .then((res) => {
                  setStoryList([...(res.data.reverse())]);
              });
@@ -15,11 +16,11 @@ function StoryList(props, ref) {
     useImperativeHandle(ref, () => ({
         addData: (data) => {
             // add new question
-            axios.post(`http://localhost:3001/question`, data)
+            axios.post(`${API}/question`, data)
                  .then((res) => {
                      message.success('问题发布成功!');
                  });
-            axios.post(`http://localhost:3001/hot`, data)
+            axios.post(`${API}/hot`, data)
                  .then((res) => {
                      let tmpData = [...storylist];
                      tmpData = [res.data, ...tmpData];
