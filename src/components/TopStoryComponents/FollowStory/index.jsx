@@ -1,5 +1,5 @@
 import { CommentOutlined, DislikeOutlined, HeartOutlined, LikeOutlined, ShareAltOutlined, StarOutlined } from '@ant-design/icons';
-import { Button } from 'antd';
+import { Button, Skeleton } from 'antd';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import API from '../../../api';
@@ -7,10 +7,13 @@ import './index.css';
 
 export default function FollowStory() {
     const [follow, setFollow] = useState([]);
+    const [loading, setLoading] = useState(true);
+
     useEffect(() => {
         axios.get(`${API}/follow`)
              .then((rsp) => {
                  setFollow([...rsp.data]);
+                 setLoading(false);
              });
     }, []);
     const follows = follow.map((item) => {
@@ -34,7 +37,9 @@ export default function FollowStory() {
     });
     return (
         <div>
-            {follows}
+            <Skeleton loading={loading} active>
+                {follows}
+            </Skeleton>
         </div>
     )
 }

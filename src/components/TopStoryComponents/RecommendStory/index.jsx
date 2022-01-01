@@ -1,15 +1,18 @@
 import { CommentOutlined, DislikeOutlined, HeartOutlined, LikeOutlined, ShareAltOutlined, StarOutlined } from '@ant-design/icons';
-import { Button } from 'antd';
+import { Button, Skeleton } from 'antd';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import API from '../../../api';
 import './index.css';
 export default function RecommendStory() {
     const [recommend, setRecommend] = useState([]);
+    const [loading, setLoading] = useState(true);
+
     useEffect(() => {
         axios.get(`${API}/recommend`)
              .then((rsp) => {
                  setRecommend([...rsp.data]);
+                 setLoading(false);
              });
     }, []);
     const recommends = recommend.map((item) => {
@@ -34,7 +37,9 @@ export default function RecommendStory() {
     });
     return (
         <div>
-            {recommends}
+            <Skeleton loading={loading} active>
+                {recommends}
+            </Skeleton>
         </div>
     )
 }

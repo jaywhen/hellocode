@@ -42,7 +42,7 @@ function StoryList(props, ref) {
 
     return (
         <div>
-            <Skeleton loading={loading} active> 
+            <Skeleton loading={loading} avatar active> 
                 {storys}
             </Skeleton>            
         </div>

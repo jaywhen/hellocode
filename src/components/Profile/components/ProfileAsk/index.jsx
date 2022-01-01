@@ -1,3 +1,4 @@
+import { Skeleton } from 'antd';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import API from '../../../../api';
@@ -5,10 +6,13 @@ import './index.css'
 export default function ProfileAsk(props) {
     let {username} = props.match.params;
     const [askList, setAskList] = useState([]);
+    const [loading, setLoading] = useState(true);
+
     useEffect(() => {
         axios.get(`${API}/question?author=${username}`)
              .then((rsp) => {
                  setAskList([...rsp.data]);
+                 setLoading(false);
              });
     }, [username]);
 
@@ -23,7 +27,9 @@ export default function ProfileAsk(props) {
     });
     return (
         <div>
-            {asks}
+            <Skeleton loading={loading} active>
+                {asks}
+            </Skeleton>
         </div>
     )
 }

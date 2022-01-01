@@ -1,4 +1,4 @@
-import { Button } from 'antd';
+import { Button, Skeleton } from 'antd';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import API from '../../../../api';
@@ -7,10 +7,13 @@ import './index.css'
 export default function ProfileFollow(props) {
     let {username} = props.match.params;
     const [followList, setFollowList] = useState([]);
+    const [loading, setLoading] = useState(true);
+
     useEffect(() => {
         axios.get(`${API}/jaywhen_follow`)
              .then((rsp) => {
                  setFollowList([...rsp.data]);
+                 setLoading(false);
              });
     }, [username]);
     const follows = followList.map((item) => {
@@ -31,7 +34,9 @@ export default function ProfileFollow(props) {
     })
     return (
         <div>
-            {follows}
+            <Skeleton loading={loading} avatar active>
+                {follows}
+            </Skeleton>
         </div>
     )
 }
