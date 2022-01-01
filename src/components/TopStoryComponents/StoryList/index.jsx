@@ -1,4 +1,4 @@
-import { message } from 'antd';
+import { message, Skeleton } from 'antd';
 import axios from 'axios'
 import React, { forwardRef, useEffect, useImperativeHandle, useState } from 'react'
 import API from '../../../api';
@@ -6,10 +6,13 @@ import StoryItem from '../StoryItem';
 
 function StoryList(props, ref) {
     const [storylist, setStoryList] = useState([]);
+    const [loading, setLoading] = useState(true);
+
     useEffect(() => {
         axios.get(`${API}/hot`)
              .then((res) => {
                  setStoryList([...(res.data.reverse())]);
+                 setLoading(false);
              });
     }, []);
 
@@ -39,7 +42,9 @@ function StoryList(props, ref) {
 
     return (
         <div>
-            { storys }
+            <Skeleton loading={loading} active> 
+                {storys}
+            </Skeleton>            
         </div>
     )
 }

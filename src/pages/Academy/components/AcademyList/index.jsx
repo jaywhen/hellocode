@@ -3,12 +3,16 @@ import React, { useEffect, useState } from 'react'
 import AcademyItem from '../AcademyItem';
 import API from '../../../../api';
 import './index.css'
+import { Skeleton } from 'antd';
 export default function AcademyList() {
     const [academylist, setAcademyList] = useState([]);
+    const [loading, setLoading] = useState(true);
+
     useEffect(() => {
         axios.get(`${API}/academys`)
              .then((res) => {
                  setAcademyList([...res.data]);
+                 setLoading(false);
              })
     }, [])
 
@@ -21,7 +25,9 @@ export default function AcademyList() {
     });
     return (
         <div className="academy-list-wrapper">
-            {academys}
+            <Skeleton loading={loading} active>
+                {academys}
+            </Skeleton>
         </div>
     )
 }
