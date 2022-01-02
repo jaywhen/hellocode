@@ -26,3 +26,12 @@
     color: rgb(72, 94, 218);
 }
 
+@media screen and (max-width: 450px) {
+    .Tablecard-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+

@@ -20,8 +20,8 @@ function ProfileMain(props) {
     }, [pathname])
 
     return (
-        <div className="profile-main-wrapprt">
-            <Menu theme="light" mode="horizontal" defaultSelectedKeys={['answer']} selectedKeys={pathKey}>
+        <div className="profile-main-wrapper">
+            <Menu className="profile-menu" theme="light" mode="horizontal" defaultSelectedKeys={['answer']} selectedKeys={pathKey}>
                 <MenuItem key="answer"><Link to={`/member/${username}/answer`}>回答</Link></MenuItem>
                 <MenuItem key="asks"><Link to={`/member/${username}/asks`}>提问</Link></MenuItem>
                 <MenuItem key="following"><Link to={`/member/${username}/following`}>关注</Link></MenuItem>

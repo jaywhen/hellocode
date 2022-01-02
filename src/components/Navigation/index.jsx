@@ -72,10 +72,23 @@ function Navigation(props) {
             <MenuItem key="logout">退出</MenuItem>
         </Menu>
     );
+
+    const menu = (
+        <Menu className="nav-menu" theme="light" defaultSelectedKeys={['hot']} selectedKeys={pathKey}>
+            <MenuItem key="home"><Link to="/hot" />首页</MenuItem>
+            <MenuItem key="academy"><Link to="/academy" />择校</MenuItem>
+            <MenuItem key="about"><Link to="/about" />关于</MenuItem>
+            <MenuItem key="careers"><Link to="/careers" />加入我们</MenuItem>
+        </Menu>
+    )
+
     return (
         <div className="nav-header">
             <div className="nav-content">
                 <div className="nav-content-left">
+                    <Dropdown overlay={menu} className="nav-dropdown">
+                        <Button type='text'>☰</Button>
+                    </Dropdown>
                     <div className="nav-logo">
                         <a href="/" >
                             <svg width="137" height="18" viewBox="0 0 137 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -83,13 +96,14 @@ function Navigation(props) {
                             </svg>
                         </a>
                     </div>
-                    <div className="nav-menu">
-                        <Menu theme="light" mode="horizontal" defaultSelectedKeys={['hot']} selectedKeys={pathKey} style={{ display: "flex", justifyContent: "center", fontSize: "15px" }}>
+                    <div className="nav-menu-wrapper">
+                        {/* <Menu theme="light" mode="horizontal" defaultSelectedKeys={['hot']} selectedKeys={pathKey} style={{ display: "flex", justifyContent: "center", fontSize: "15px" }}>
                             <MenuItem key="home"><Link to="/hot" />首页</MenuItem>
                             <MenuItem key="academy"><Link to="/academy" />择校</MenuItem>
                             <MenuItem key="about"><Link to="/about" />关于</MenuItem>
                             <MenuItem key="careers"><Link to="/careers" />加入我们</MenuItem>
-                        </Menu>
+                        </Menu> */}
+                        {menu}
                     </div>
                 </div>
                 <div className="nav-search">

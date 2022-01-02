@@ -9,3 +9,8 @@
     width: 800px;
 }
 
+@media screen and (max-width: 450px) {
+    .academy-content {
+        width: 100%;
+    }
+}
